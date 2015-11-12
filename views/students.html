@@ -1,0 +1,16 @@
+<div ng-controller="StudentListCtrl">
+	<div class="col-md-12">
+	<div class="panel">
+		<input type="text" class="form-control" placeholder="Search" ng-model="search">
+	</div>
+
+		<div ng-repeat="student in students | filter: search" class="col-md-4 col-sm-6 col-xs-12">
+			<div>img</div>
+			{{student.firstName}} {{student.lastName}} <br>
+			<div style="width: 10px; height: 10px; background-color: {{student.belt}}"></div>
+		</div>
+
+
+
+	</div>
+</div>
